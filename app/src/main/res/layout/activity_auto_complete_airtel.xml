@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AutoCompleteAirtelActivity">
+
+    <EditText
+        android:id="@+id/addressSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:background="#E1E1E1"
+        android:padding="5dp"
+        android:layout_marginEnd="20dp"
+
+        android:gravity="center"
+        android:hint="Enter some letters to start autocomplete search" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:id="@+id/divver"
+        android:layout_below="@+id/addressSearch"
+        android:background="@color/black"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/searchResultsRV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:layout_below="@+id/addressSearch"
+        android:layout_centerHorizontal="true"
+        android:background="#FFFFFF" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/addressDisplay"
+        android:text="Your selected address is\n"
+        android:layout_below="@+id/addressSearch"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="100dp"
+        android:textSize="25sp"
+        android:textColor="@color/black"/>
+
+
+</RelativeLayout>
